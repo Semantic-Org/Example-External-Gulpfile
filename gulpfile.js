@@ -5,9 +5,8 @@
 var
   gulp         = require('gulp'),
 
-  // watch for file changes and build
+  // require tasks as dependencies
   watch        = require('./semantic/tasks/watch'),
-  // build all files
   build        = require('./semantic/tasks/build')
 ;
 
@@ -17,5 +16,9 @@ var
 *******************************/
 
 
-gulp.task('watch-ui', 'one', watch);
-gulp.task('build-ui', 'two', build);
+gulp.task('watch-ui', watch);
+gulp.task('build-ui', build);
+
+// Gulp help descriptions also work
+// gulp.task('watch-ui', 'Watch UI for Semantic UI', watch);
+// gulp.task('build-ui', 'Build UI for Semantic UI', build);
